@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
@@ -47,7 +47,7 @@ export function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="relative min-h-screen bg-navy-900 text-text-primary overflow-x-hidden selection:bg-emerald-500/25 selection:text-emerald-300 flex flex-col justify-between">
         {/* Scroll To Top on Route Change */}
         <ScrollToTop />
@@ -69,7 +69,7 @@ export function App() {
         {/* Executive Footer */}
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
